@@ -39,9 +39,9 @@ $(document).ready(function() {
     $("ul#user").children("li").first().click(function() {
       $(this).toggleClass("body-green");
     });
-      $("ul#webpage").children("li").first().click(function() {
-      $(this).toggleClass("body-green");
-    })
+    //   $("ul#webpage").children("li").first().click(function() {
+    //   $(this).toggleClass("body-green");
+    // })
     });
 
   $("button#goodbye").click(function() {
@@ -62,14 +62,17 @@ $(document).ready(function() {
     $("ul#webpage").prepend("<li>Mewo Imma catten.</li>");
   });
 
-  // $("button#cat").click(function() {
-  //   $("body").removeClass();
-  //   $("ul#user").prepend("<li>MEOW!</li>");
-  //   $("ul#webpage").prepend("<li>Borka-borka me are doge.</li>");
-  // });
+  $("button#cat").click(function() {
+    $("body").removeClass();
+    $("ul#user").prepend("<li>MEOW!</li>");
+    $("ul#webpage").prepend("<li>Borka-borka me are doge.</li>");
+  });
 
-  // $("button#insert-img").click(function() {
-  //   $("body").removeClass();
-  //   $("ul#webpage").prepend(<img src = "img/walrus.jpg"></img>);
-  // });
+  $("button#walrus-img").click(function() {
+    $("body").removeClass();
+    $("ul#webpage").prepend("<img src = 'img/walrus.jpg'>");
+    $("ul#webpage").children("img").first().click(function() {
+      $(this).remove();
+  });
+  });
 });
